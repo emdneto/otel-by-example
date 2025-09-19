@@ -125,7 +125,7 @@ jobs:
             src/java/*.gradle*
             src/java/**/*.gradle*
       - name: Install devenv 1.6
-        run: nix profile install github:NixOS/nixpkgs/e6f23dc08d3624daab7094b701aa3954923c6bbb#devenv
+        run: nix profile install nixpkgs#devenv
       - name: Devenv CI
         working-directory: ${{ matrix.snippet.dir }}
         run: devenv ci -d
